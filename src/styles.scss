@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'variables' as *;
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  @font-face {
+    font-family: 'SfDistantGalaxy';
+    src: url('/assets/fonts/SfDistantGalaxyAltoutline-e2Bp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Starjedi';
+    src: url('/assets/fonts/Starjedi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }

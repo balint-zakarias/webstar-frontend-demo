@@ -1,0 +1,96 @@
+@use 'variables' as *;
+
+.login-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/assets/images/bg_1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .login-container {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    text-align: center;
+  
+    .title {
+      color: $color-white;
+      font-size: 30px;
+      font-family: 'Starjedi', sans-serif;
+      margin-bottom: 0.25rem;
+    }
+  
+    .subtitle {
+      font-size: 70px;
+      font-family: 'SfDistantGalaxy', sans-serif;
+      color: $color-white;
+    }
+  
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      label {
+        padding-top: 10px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        color: $color-white;
+        align-self: center;
+      }
+  
+      input {
+        padding: 0.75rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        border: 0px solid $color-gray;
+        border-radius: 5px;
+        width: 100%;
+        outline: none;
+        text-align: center;
+
+        &:focus {
+          border-color: $color-yellow;
+          box-shadow: 0 0 0 2px rgba($color-yellow, 1);
+        }
+
+        &::selection {
+          background: rgba($color-yellow, .5)
+        }
+      }
+  
+      button {
+        width: 200px;
+        padding: .75rem;
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        background-color: $color-yellow;
+        color: $color-black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($color-yellow, 10%)
+        }
+      }
+    }
+  }
+  
+  .footer-text {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-white;
+  }

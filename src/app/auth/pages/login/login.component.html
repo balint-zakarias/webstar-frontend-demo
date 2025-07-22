@@ -1,0 +1,18 @@
+<div class="login-wrapper">
+    <div class="login-container">
+      <h1 class="title">Webstar</h1>
+      <h2 class="subtitle">FRONTEND</h2>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+        <label for="username">Felhasználónév</label>
+        <input formControlName="username" placeholder="Felhasználónév" type="text" />
+        <label for="password">Jelszó</label>
+        <input formControlName="password" placeholder="Jelszó" type="password" />
+        <button type="submit">Belépés</button>
+      </form>
+    </div>
+  
+    <footer class="footer-text">
+      Webstar Csoport Kft. - &#169; Minden jog fenntartva.
+    </footer>
+  </div>
