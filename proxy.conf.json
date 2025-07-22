@@ -1,0 +1,8 @@
+{
+    "/rest/frontend-felveteli/v2": {
+      "target": "https://developer.webstar.hu",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }

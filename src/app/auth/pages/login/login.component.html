@@ -5,10 +5,15 @@
   
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
         <label for="username">Felhasználónév</label>
-        <input formControlName="username" placeholder="Felhasználónév" type="text" />
+        <input id="username" formControlName="username" placeholder="Felhasználónév" type="text" />
+
         <label for="password">Jelszó</label>
-        <input formControlName="password" placeholder="Jelszó" type="password" />
+        <input id="password" formControlName="password" placeholder="Jelszó" type="password" />
         <button type="submit">Belépés</button>
+
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
       </form>
     </div>
   
