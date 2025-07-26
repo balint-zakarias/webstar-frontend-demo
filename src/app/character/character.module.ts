@@ -7,11 +7,12 @@ import { CharacterComponent } from './character.component';
 
 @NgModule({
   declarations: [
-    CharacterComponent
+    
   ],
   imports: [
     CommonModule,
-    CharacterRoutingModule
+    CharacterRoutingModule,
+    CharacterComponent
   ]
 })
 export class CharacterModule { }

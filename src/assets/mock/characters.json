@@ -1,0 +1,148 @@
+{
+  "characters": [
+    {
+      "id": "1",
+      "name": "Darth<br />Vader",
+      "side": "DARK",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 30000
+      },
+      "createdTimestamp": 1576967247,
+      "description": "Darth Vader a Galaktikus Birodalom rettegett vezére és egykori Jedi lovag. A Sötét oldal szolgálatába állva az Erő egyik legerősebb használója lett.",
+      "image": "assets/images/characters/vader.png"
+    },
+    {
+      "id": "2",
+      "name": "Darth<br />Maul",
+      "side": "DARK",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 9000
+      },
+      "createdTimestamp": 1576967248,
+      "description": "Darth Maul egy Zabrak harcos, akit Darth Sidious nevelt Sith tanítványává. Ikerszablyás fénykardjával félelmet keltett a Köztársaságban.",
+      "image": "assets/images/characters/maul.png"
+    },
+    {
+      "id": "3",
+      "name": "Grievous<br />tábornok",
+      "side": "DARK",
+      "power": {
+        "power": "Kibernetikus test",
+        "midichlorian": 5000
+      },
+      "createdTimestamp": 1576967249,
+      "description": "Grievous tábornok egy félig élő, félig gép harcos, aki Jedi mestereket gyilkolt le, és fénykardjaikat trófeaként viselte testén.",
+      "image": "assets/images/characters/grievous.png"
+    },
+    {
+      "id": "4",
+      "name": "Boba<br />Fett",
+      "side": "DARK",
+      "power": {
+        "power": "Páncélzat",
+        "midichlorian": 2000
+      },
+      "createdTimestamp": 1576967250,
+      "description": "Boba Fett egy mandalori származású harcos és fejvadász volt. Nem természetes úton jött világra, ugyanis a hírhedt mandalori fejvadász, Jango Fett klónja és fogadott gyermeke volt, akinek kérésére a kaminoiak hozták létre a Yavini csata előtt 32-ben.",
+      "image": "assets/images/characters/boba.png"
+    },
+    {
+      "id": "5",
+      "name": "Phasma",
+      "side": "DARK",
+      "power": {
+        "power": "Harcászati tapasztalat",
+        "midichlorian": 1000
+      },
+      "createdTimestamp": 1576967251,
+      "description": "Phasma egy elit rohamosztagos parancsnok, aki krómozott páncéljáról ismert. Kegyetlen és hatékony, a Birodalom új arcát képviseli.",
+      "image": "assets/images/characters/phasma.png"
+    },
+    {
+      "id": "6",
+      "name": "Birodalmi<br />rohamosztagos",
+      "side": "DARK",
+      "power": {
+        "power": "Fehér páncélzat",
+        "midichlorian": 500
+      },
+      "createdTimestamp": 1576967252,
+      "description": "A Birodalmi rohamosztagosok a Galaktikus Birodalom gyalogos egységei. Fegyelmezettek, kegyetlenek és vakon követik parancsnokaik utasításait.",
+      "image": "assets/images/characters/stormtrooper.png"
+    },
+    {
+      "id": "7",
+      "name": "Luke<br />Skywalker",
+      "side": "LIGHT",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 13000
+      },
+      "createdTimestamp": 1576967253,
+      "description": "Luke Skywalker a Lázadás hőse és Jedi mester. Ő hozta egyensúlyba az Erőt, és újraélesztette a Jedi rendet a Galaxisban.",
+      "image": "assets/images/characters/luke.png"
+    },
+    {
+      "id": "8",
+      "name": "Obi-Wan<br />Kenobi",
+      "side": "LIGHT",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 15000
+      },
+      "createdTimestamp": 1576967254,
+      "description": "Obi-Wan Kenobi egy bölcs és tapasztalt Jedi mester, aki Anakin Skywalker mestere volt. A Galaxis védelmezőjeként számos háborút megélt.",
+      "image": "assets/images/characters/kenobi.png"
+    },
+    {
+      "id": "9",
+      "name": "Anakin<br />Skywalker",
+      "side": "LIGHT",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 30000
+      },
+      "createdTimestamp": 1576967255,
+      "description": "Anakin Skywalker a Kiválasztottként ismert Jedi, akit hatalmas Erő-potenciál jellemez. Tragikus sorsa Darth Vaderré tette őt.",
+      "image": "assets/images/characters/anakin.png"
+    },
+    {
+      "id": "10",
+      "name": "Rey",
+      "side": "LIGHT",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 12000
+      },
+      "createdTimestamp": 1576967256,
+      "description": "Rey egy Erő-érzékeny harcos, aki Jakku sivatagából emelkedett fel. A Jedi rend új reménye, aki saját útját keresi az Erőn keresztül.",
+      "image": "assets/images/characters/rey.png"
+    },
+    {
+      "id": "11",
+      "name": "Yoda",
+      "side": "LIGHT",
+      "power": {
+        "power": "Erő használata",
+        "midichlorian": 20000
+      },
+      "createdTimestamp": 1576967257,
+      "description": "Yoda egy több száz éves Jedi mester, aki bölcsességéről és harci tudásáról híres. Generációk mestere volt a Galaxis történetében.",
+      "image": "assets/images/characters/yoda.png"
+    },
+    {
+      "id": "12",
+      "name": "Han<br />Solo",
+      "side": "LIGHT",
+      "power": {
+        "power": "Űrcsempész",
+        "midichlorian": 1500
+      },
+      "createdTimestamp": 1576967258,
+      "description": "Han Solo egy vakmerő pilóta és űrcsempész, a Millennium Falcon kapitánya. Híres hidegvéréről, hűségéről és gyors kezéről.",
+      "image": "assets/images/characters/solo.png"
+    }
+  ]
+}

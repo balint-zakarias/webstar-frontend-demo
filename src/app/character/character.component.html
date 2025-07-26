@@ -1,85 +1,103 @@
 <div class="character-wrapper">
-    <header class="character-header">
-        <span class="user">
-          <img src="assets/icons/user.svg" alt="User icon" />
-          Felvételiző pilóta
-        </span>
-        <a href="#" class="logout">
-          Űrhajó elhagyása
-          <img src="assets/icons/logout.svg" alt="Logout icon" />
-        </a>
-      </header>
-  
-    <main class="character-content">
-      <section class="character-info">
-        <div class="labels">
-            <div class="label-card">
-              <div class="icon-box side-icon">
-                <div class="box"></div>
-              </div>
-              <div class="text-group">
-                <span class="label-title">OLDAL</span>
-                <span class="label-value">Sötét</span>
-              </div>
-            </div>
-          
-            <div class="label-card">
-              <div class="icon-box power-icon">
-                <img src="assets/icons/star.svg" alt="Star icon" class="icon-svg" />
-              </div>
-              <div class="text-group">
-                <span class="label-title">KÜLÖNLEGES ERŐ</span>
-                <span class="label-value">Páncélzat</span>
-              </div>
-            </div>
+  <header class="character-header">
+    <span class="user">
+      <img src="assets/icons/user.svg" alt="User icon" />
+      Felvételiző pilóta
+    </span>
+    <a href="#" class="logout">
+      Űrhajó elhagyása
+      <img src="assets/icons/logout.svg" alt="Logout icon" />
+    </a>
+  </header>
+
+  <main class="character-content">
+    <div class="character-header-line">
+      <div class="labels">
+        <div class="label-card">
+          <div class="icon-box" [ngClass]="{'side-icon-dark': activeCharacter?.side === 'DARK', 'side-icon-light': activeCharacter?.side === 'LIGHT'}">
+            <div class="box"></div>
           </div>
-  
-        <div class="name">
-          <h1>Boba</h1>
-          <h1>Fett</h1>
+          <div class="text-group">
+            <span class="label-title">OLDAL</span>
+            <span class="label-value">{{ getTranslatedSide() }}</span>
+          </div>
         </div>
-  
-        <p class="description">
-          Boba Fett egy mandalori származású harcos és fejvadász volt. Nem természetes úton jött világra,
-          ugyanis a hírhedt mandalori fejvadász, Jango Fett klónja és fogadott gyermeke volt, akinek kérésére a
-          kaminoiak hozták létre a Yavini csata előtt 32-ben.
-        </p>
-  
+
+        <div class="label-card">
+          <div class="icon-box power-icon">
+            <img src="assets/icons/star.svg" alt="Star icon" class="icon-svg" />
+          </div>
+          <div class="text-group">
+            <span class="label-title">KÜLÖNLEGES ERŐ</span>
+            <span class="label-value" [innerHTML]="(activeCharacter?.power?.power || '')"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <div class="dots">
+          <span
+            *ngFor="let c of characters; let i = index"
+            class="dot"
+            [class.active]="i === activeCharacterIndex"
+            (click)="setCharacter(i)">
+          </span>
+        </div>
+
+        <button class="arrow left" (click)="prevCharacter()">
+          <img src="assets/icons/arrow_circle.png" alt="To left" />
+        </button>
+
+        <button class="arrow right" (click)="nextCharacter()">
+          <img src="assets/icons/arrow_circle.png" alt="To right" />
+        </button>
+      </div>
+    </div>
+
+    <div class="content-body">
+      <section class="character-info">
+        <div class="name">
+          <h1 [innerHTML]="(activeCharacter?.name || '').toLowerCase()"></h1>
+        </div>
+
+        <p class="description">{{ activeCharacter?.description }}</p>
+
         <div class="modules">
-            <h3>Modulok</h3>
-          
-            <div class="module-grid">
-              <div class="module-section">
-                <h4>Szimuláció</h4>
-                <div class="content">
-                  <p>Válassz két karaktert ellentétes oldalakról</p>
-                  <div class="btn-group">
-                    <button class="btn-outline">Karakter kiválasztása</button>
-                    <button class="btn-filled">Küzdelem indítása</button>
-                  </div>
+          <h3>Modulok</h3>
+
+          <div class="module-grid">
+            <div class="module-section">
+              <h4>Szimuláció</h4>
+              <div class="content">
+                <p>Válassz két karaktert ellentétes oldalakról</p>
+                <div class="btn-group">
+                  <button class="btn-outline">Karakter kiválasztása</button>
+                  <button class="btn-filled">Küzdelem indítása</button>
                 </div>
               </div>
-          
-              <div class="module-section crud">
-                <h4>CRUD kezelés</h4>
-                <div class="content">
-                  <p>Karakterszerkesztő megnyitása</p>
-                  <div class="btn-group">
-                    <button class="btn-outline">Karakterek szerkesztése</button>
-                  </div>
+            </div>
+
+            <div class="module-section crud">
+              <h4>CRUD kezelés</h4>
+              <div class="content">
+                <p>Karakterszerkesztő megnyitása</p>
+                <div class="btn-group">
+                  <button class="btn-outline">Karakterek szerkesztése</button>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
-  
+
       <div class="image-wrapper">
         <div class="yellow-circle"></div>
-        <img src="assets/images/boba.png" alt="Boba Fett" />
+        <img [src]="activeCharacter?.image" [alt]="sanitizedCharacterName" />
       </div>
-    </main>
-  
-    <footer class="footer">
-      Webstar Csoport Kft. – © Minden jog fenntartva
-    </footer>
-  </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Webstar Csoport Kft. – © Minden jog fenntartva
+  </footer>
+</div>
