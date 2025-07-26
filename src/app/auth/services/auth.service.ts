@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 export interface LoginResponse {
   token: string;
@@ -25,6 +26,11 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<LoginResponse> {
+    if (environment.useMockAuth) {
+      console.warn('Mock login activated');
+      return this.http.get<LoginResponse>('assets/mock/auth-response.json');
+    }
+
     const authToken = btoa(`${this.basicAuthUser}:${this.basicAuthPassword}`);
 
     const body = { username, password };

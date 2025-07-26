@@ -1,0 +1,9 @@
+{
+    "token": "mock-token-123456",
+    "refreshToken": "mock-refresh-token-abcdef",
+    "user": {
+      "email": "frontend@webstar.hu",
+      "firstName": "Pilóta",
+      "lastName": "Felvételiző"
+    }
+  }
